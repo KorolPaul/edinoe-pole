@@ -1,0 +1,5 @@
+.content {
+    @include tablet {
+        height: 100vh;
+    }
+}
