@@ -1,0 +1,37 @@
+.statistics {
+    border-radius: 20px;
+    background-color: $bright_color;
+    padding: 30px 20px;
+    color: $light_color;
+    margin: -20px 0 0;
+    @include tablet {
+        padding: 57px 60px;
+        display: flex;
+        justify-content: space-between;
+        margin: -130px 0 130px;
+    }
+
+    &_column {
+        margin: 0 0 30px;
+        @include tablet {
+            margin: 0;
+            width: 28%;
+        }
+    }
+    &_title {
+        font-size: 40px;
+        font-weight: 200;
+        margin: 0 0 5px;
+        @include tablet {
+            font-size: 64px;
+        }
+    }
+    &_text {
+        font-size: 16px;
+        line-height: 1.38;
+        margin: 0;
+        @include tablet {
+            font-size: 21px;
+        }
+    }
+}

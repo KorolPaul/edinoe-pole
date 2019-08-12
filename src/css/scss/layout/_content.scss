@@ -1,5 +1,16 @@
 .content {
-    @include tablet {
-        height: 100vh;
+    &_holder {
+        @include layout;
+        padding: 0 $layout_indent;
+
+        &__bright {
+            background: $bright_color;
+
+        }
+        &__gray {
+            background: $gray_color__bg;
+            padding-top: 38px;
+            padding-bottom: 38px;
+        }
     }
 }

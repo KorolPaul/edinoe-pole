@@ -1,0 +1,26 @@
+.partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    @include tablet {
+        margin: 0 0 100px;
+    }
+
+    .partner {
+        display: block;
+        width: 22%;
+        margin: 0 5% 20px;
+        text-align: center;
+        @include tablet {
+            margin: 0 0 90px;
+            width: 17%;
+        }
+
+        &:nth-child(7),
+        &:nth-child(8),
+        &:nth-child(9),
+        &:nth-child(10) {
+            width: 15%;
+        }
+    }
+}

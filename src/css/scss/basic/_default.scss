@@ -1,19 +1,8 @@
-html {
-    overflow: hidden;
-}
-
-.sidebar-opened {
-    overflow: hidden;
-}
-
 body {
     background: $bg_color;
     color: $color;
-    font: 200 #{$font-size} $font-family;
-    @include tablet {
-        background-size: 100% auto;
-        height: 100vh;
-    }
+    font: #{$font-size} $font-family;
+    padding: 0;
 }
 
 a {
@@ -32,12 +21,28 @@ a {
 }
 
 p {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
 }
 
 ul,
 ol {
     padding: 0 0 0 20px;
+}
+
+ul li {
+    font-size: 16px;
+    line-height: 1.38;
+    margin: 0 0 16px;
+    @include tablet {
+        font-size: 21px;
+        line-height: 1.19;
+    }
+
+    &::marker {
+        color: $yellow_color;
+        font-size: 24px;
+        vertical-align: -2px;
+    }
 }
 
 img {
@@ -55,8 +60,4 @@ textarea {
 table {
     border-collapse: collapse;
     width: 100%;
-}
-
-.bright {
-    color: $bright_color;
 }
