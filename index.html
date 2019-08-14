@@ -26,15 +26,16 @@
         <a class="logo" href="#main">
             <img src="src/img/logo.svg" alt="" class="logo_icon">
         </a>
+        <nav class="menu">
+            <a href="#for-who" class="menu_link active">Для кого</a>
+            <a href="#clients" class="menu_link">Клиенты</a>
+            <a href="#advantages" class="menu_link">Преимущества</a>
+            <a href="#how-it-works" class="menu_link">Как это работает</a>
+            <button class="button button__light button__bordered">Записаться на демо</button>
+        </nav>
     </header>
-    <nav class="menu">
-        <a href="#for-who" class="pages_link active">Для кого</a>
-        <a href="#clients" class="pages_link">Клиенты</a>
-        <a href="#advantages" class="pages_link">Преимущества</a>
-        <a href="#how-it-works" class="pages_link">Как это работает</a>
-    </nav>
 
-    <div class="content">
+    <div class="content content__overflow">
         <div class="content_holder">
             <div class="about">
                 <h1>Билетный сервис нового поколения</h1>
@@ -593,7 +594,7 @@
             </g>
         </svg>
     </div>
-    <div class="content">
+    <div class="content content__dots">
         <div class="content_holder">
             <h2>Чем мы отличаемся?</h2>
             <div class="advantages">
@@ -653,7 +654,10 @@
                     </div>
                 </div>
             </div>
-
+        </div>
+    </div>
+    <div class="content">
+        <div class="content_holder">
             <h2>Как поднять продажи в 2 раза</h2>
             <div class="increase">
                 <div class="increase_column">
@@ -724,67 +728,73 @@
             <div class="content_holder">
                 <form action="" class="form">
                     <h2>Узнайте подробнее о билетном сервисе «Единое Поле»</h2>
-                    <div class="form_row">
-                        <div class="form_row-item">
-                            <label for="">Контакты</label>
+                    <fieldset class="form_fieldset">
+                        <div class="form_row">
+                            <div class="form_row-item">
+                                <label for="">Контакты</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form_row">
-                        <div class="form_row-item">
-                            <input type="text" placeholder="Ваше имя">
+                        <div class="form_row">
+                            <div class="form_row-item">
+                                <input type="text" placeholder="Ваше имя">
+                            </div>
+                            <div class="form_row-item">
+                                <input type="email" placeholder="E-mail">
+                            </div>
                         </div>
-                        <div class="form_row-item">
-                            <input type="email" placeholder="E-mail">
+                        <div class="form_row">
+                            <div class="form_row-item"></div>
+                            <div class="form_row-item">
+                                <input type="tel" placeholder="Телефон для связи">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form_row">
-                        <div class="form_row-item"></div>
-                        <div class="form_row-item">
-                            <input type="tel" placeholder="Телефон для связи">
+                    </fieldset>
+                    <fieldset class="form_fieldset">
+                        <div class="form_row">
+                            <div class="form_row-item">
+                                <label for="">Удобные дата и время демонстрации</label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form_row">
-                        <div class="form_row-item">
-                            <label for="">Удобные дата и время демонстрации</label>
+                        <div class="form_row">
+                            <div class="form_row-item">
+                                <input type="text" placeholder="Дата">
+                            </div>
+                            <div class="form_row-item">
+                                <input type="text" placeholder="Время">
+                            </div>
                         </div>
-                    </div>
-                    <div class="form_row">
-                        <div class="form_row-item">
-                            <input type="text" placeholder="Дата">
-                        </div>
-                        <div class="form_row-item">
-                            <input type="text" placeholder="Время">
-                        </div>
-                    </div>
-                    <div class="form_row">
-                        <div class="form_row-item">
-                            <input type="submit" value="Записаться на демо" />
+                    </fieldset>
+                    <fieldset class="form_fieldset">
+                        <div class="form_row">
+                            <input class="button button__light" type="submit" value="Записаться на демо" />
                             <p class="form_clarification">Нажимая на кнопку «Записаться на демо», вы даёте согласие на обработку своих персональных данных</p>
                         </div>
-                    </div>
+                    </fieldset>
                 </form>
             </div>
         </div>
     </div>
 
     <footer class="footer">
-        <div class="footer_column">
-            <a href="">
-                <img src="src/img/logo-dark.svg" alt="" class="footer_logo">
-            </a>
-            <p class="footer_description">Профессиональный сервис для продажи и учета билетов</p>
-        </div>
-        <div class="footer_column">
-            <p class="footer_title">Клиентам</p>
-            <p>partner@edinoepole.ru</p>
-            <p>105122, г. Москва, Россия Щелковское ш., д. 5, стр. 1, офис 616</p>
-            <p>+7(495) 108-34-88</p>
-        </div>
-        <div class="footer_column">
-            <p class="footer_title">Техподдержка</p>
-            <p>help@edinoepole.ru</p>
-            <p>Время работы: с 10:00 до 18:00</p>
-            <p>+7(495) 108-34-88/p>
+        <div class="footer_container">
+            <div class="footer_column">
+                <a href="">
+                    <img src="src/img/logo-dark.svg" alt="" class="footer_logo">
+                </a>
+                <p class="footer_description">Профессиональный сервис для продажи и учета билетов</p>
+            </div>
+            <div class="footer_column">
+                <p class="footer_title">Клиентам</p>
+                <p>partner@edinoepole.ru</p>
+                <p>105122, г. Москва, Россия Щелковское ш., д. 5, стр. 1, офис 616</p>
+                <p>+7(495) 108-34-88</p>
+            </div>
+            <div class="footer_column">
+                <p class="footer_title">Техподдержка</p>
+                <p>help@edinoepole.ru</p>
+                <p>Время работы: с 10:00 до 18:00</p>
+                <p>+7(495) 108-34-88/p>
+            </div>
         </div>
     </footer>
 

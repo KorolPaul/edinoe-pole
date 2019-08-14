@@ -41,6 +41,9 @@
         display: flex;
         align-items: flex-start;
         justify-content: stretch;
+        @include tablet {
+            margin-bottom: 20px;
+        }
     }
     &_count {
         color: $bright_color;
@@ -54,6 +57,8 @@
             border-radius: 30px;
             background: $bright_color;
             padding: 3px 3px 3px 27px;
+            margin-top: -8px;
+            margin-right: 20px;
         }
     }
     &_count-value {

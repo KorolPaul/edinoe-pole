@@ -1,34 +1,60 @@
 .menu {
-    margin: 0 50px 0 0;
-    width: 220px;
     position: relative;
     display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 55px 20px;
+    background: $light_color;
+    @include tablet {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        position: static;
+        padding: 0;
+        background: transparent;
+    }
+    @include desktop {
+        justify-content: flex-end;
+    }
+
+    .menu-opened & {
+        display: block;
+    }
 
     &_link {
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 1.07;
         display: block;
         font: 300 19px $font-family;
-        padding: 24px 0;
-        position: relative;
-        text-transform: uppercase;
-
-        &::after {
-            content: '';
-            border-bottom: 2px solid $bright_color;
-            position: absolute;
-            left: 0;
-            right: 0;
-            top: 50%;
-            margin: 15px 0 0;
-            transform: scaleX(0);
-            transform-origin: 0 0;
-            transition: .2s ease-in-out transform;
+        margin: 0 0 30px;
+        @include tablet {
+            font-size: 17px;
+            font-weight: bold;
+            margin: 0 15px;
+        }
+        @include desktop {
+            margin: 0 30px;
         }
 
-        &:hover,
-        &.active {
-            &::after {
-                transform: scaleX(1);
-            }
+        &:hover {
+            color: $bright_color;
+        }
+    }
+
+    .button {
+        position: absolute;
+        bottom: 40px;
+        left: 20px;
+        right: 20px;
+        margin: 0;
+        width: calc(100% - 40px);
+        @include tablet {
+            position: static;
+            width: auto;
         }
     }
 }

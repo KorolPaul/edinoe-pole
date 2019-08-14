@@ -16,7 +16,7 @@
     }
     &_image {
         border-radius: 20px;
-        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, .1);
         background-color: #eeedee;
         padding: 28px 0;
         position: relative;
@@ -29,9 +29,5 @@
             width: 100%;
         }
     }
-    
-    &::after {
-        content: '';
-        
-    }
+
 }

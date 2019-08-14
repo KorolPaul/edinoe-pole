@@ -48,4 +48,8 @@ input[type="button"] {
             color: #beaeea;
         }
     }
+    &__bordered {
+        border: 1px solid $bright_color;
+        padding: 10px 23px;
+    }
 }

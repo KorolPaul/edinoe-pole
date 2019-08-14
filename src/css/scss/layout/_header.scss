@@ -1,6 +1,15 @@
 .header {
+    @include layout;
     position: relative;
     padding: 10px 0;
     z-index: 2;
     margin: 0 0 53px;
+    @include tablet {
+        padding: 42px 0;
+    }
+    @include desktop {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 }

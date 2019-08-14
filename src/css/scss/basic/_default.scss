@@ -64,3 +64,10 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
+
+.menu-opened {
+    overflow: hidden;
+    @include tablet {
+        overflow: auto;
+    }
+}
