@@ -1,0 +1,139 @@
+.advantages {
+    margin: 0 0 100px;
+    @include tablet {
+        margin-bottom: 80px;
+    }
+
+    &_areas {
+        margin: 0 0 42px;
+        @include tablet {
+            display: flex;
+            margin: 60px 0 56px;
+        }
+    }
+    &_area {
+        padding: 14px 20px;
+        border-radius: 6px;
+        border: solid 1px #d8d8d8;
+        @include tablet {
+            padding: 30px 33px;
+            width: 50%;
+        }
+
+        &__main {
+            background: $bright_color;
+            padding: 17px 30px;
+            border-color: transparent;
+            margin: -10px -10px 0;
+            color: $light_color;
+            @include tablet {
+                margin: -10px 0 -10px -10px;
+                padding: 35px 30px;
+            }
+        }
+    }
+    &_title {
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 1.38;
+        opacity: .5;
+        @include tablet {
+            font-size: 21px;
+        }
+
+        .advantages_area__main & {
+            font-size: 30px;
+            font-weight: bold;
+            line-height: 1.07;
+            opacity: 1;
+            @include tablet {
+                font-size: 34px;
+            }
+        }
+    }
+    &_list {
+        line-height: 1.38;
+
+        li::marker {
+            color: #d8d6d8;
+
+            .advantages_area__main & {
+                color: $yellow_color;
+            }
+        }
+    }
+    &_texts {
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-startl
+        }
+    }
+    &_text {
+        opacity: 0.7;
+        font-size: $font-size__small;
+        line-height: 1.38;
+        padding: 0 0 30px 45px;
+        position: relative;
+        margin: 0;
+        @include tablet {
+            font-size: 21px;
+            padding: 50px 25px 0 0;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            border-radius: 50%;
+            background: #d8d6d8;
+            width: 21px;
+            height: 21px;
+            z-index: 2;
+        }
+        &::after {
+            content: '';
+            background: linear-gradient(to right, #d8d6d8, #7d5dd4);
+            border-left: 1px dashed $light_color;
+            box-sizing: border-box;
+            position: absolute;
+            left: 10px;
+            top: 5px;
+            bottom: 0;
+            width: 2px;
+            clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+            z-index: 1;
+            @include tablet {
+                border-left: none;
+                border-top: 1px dashed $light_color;
+                top: 10px;
+                bottom: auto;
+                width: 100%;
+                height: 2px;
+                clip-path: polygon(0 0, 100% 0, 100% 50%, 0 50%);
+            }
+        }
+
+        &__bright {
+            color: $bright_color;
+            opacity: 1;
+
+            &::before {
+                background-color: $bright_color;
+                width: 29px;
+                height: 29px;
+                left: -4px;
+                @include tablet {
+                    top: -11px;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+            &::after {
+                content: none;
+            }
+        }
+
+    }
+}

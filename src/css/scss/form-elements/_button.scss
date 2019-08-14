@@ -29,8 +29,23 @@
     }
 }
 
-.button,
 button,
 input[type="button"] {
     @include button;
+}
+
+.button {
+    @include button;
+
+    &__light {
+        background: $light_color;
+        color: $bright_color;
+
+        &:hover {
+            color: $light_color;
+        }
+        &:active {
+            color: #beaeea;
+        }
+    }
 }

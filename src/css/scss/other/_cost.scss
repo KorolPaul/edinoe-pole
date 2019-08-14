@@ -1,0 +1,41 @@
+.cost {
+    @include tablet {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+    &_title {
+        font-size: 30px;
+        font-weight: 600;
+        margin: 0 0 12px;
+        display: block;
+        @include tablet {
+            font-size: 34px;
+            margin: 0;
+        }
+    }
+    &_value {
+        display: block;
+        color: $bright_color;
+        font-size: 40px;
+        font-weight: 600;
+        margin: 0 0 22px;
+        @include tablet {
+            font-size: 80px;
+            margin: 0;
+        }
+    }
+    &_list {
+        li {
+            margin: 0;
+
+            &:first-child {
+                color: $bright_color;
+                
+                &::marker {
+                    color: $bright_color;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,11 @@
 body {
     background: $bg_color;
     color: $color;
-    font: #{$font-size} $font-family;
+    font: #{$font-size__small} $font-family;
     padding: 0;
+    @include tablet {
+        font-size: $font-size;
+    }
 }
 
 a {

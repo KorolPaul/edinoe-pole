@@ -1,0 +1,35 @@
+.demo {
+    color: $light_color;
+    font-size: $font-size__small;
+    padding: 48px 0;
+    position: relative;
+    @include tablet {
+        font-size: 17px;
+        padding: 100px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &_column {
+        position: relative;
+        z-index: 2;
+        & + & {
+            @include tablet {
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+    &_title {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.39;
+        margin: 0 0 10px;
+        @include tablet {
+            font-size: 34px;
+            font-weight: 600;
+            line-height: 0.88;
+            margin-bottom: 16px;
+        }
+    }
+}

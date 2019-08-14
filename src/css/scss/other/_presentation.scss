@@ -1,0 +1,37 @@
+.presentation {
+    position: relative;
+    @include tablet {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &_column {
+        margin: 0 0 40px;
+        @include tablet {
+            font-size: 21px;
+            width: 400px;
+            margin: 0 40px 0 0;
+        }
+    }
+    &_image {
+        border-radius: 20px;
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.1);
+        background-color: #eeedee;
+        padding: 28px 0;
+        position: relative;
+        z-index: 2;
+        @include tablet {
+            padding: 52px 0;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+    
+    &::after {
+        content: '';
+        
+    }
+}

@@ -1,6 +1,10 @@
 .steps {
     position: relative;
     text-align: center;
+    margin: 0 0 100px;
+    @include tablet {
+        margin-bottom: 220px;
+    }
 
     &_holder {
         text-align: left;

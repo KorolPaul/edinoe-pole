@@ -1,16 +1,33 @@
 .content {
+    position: relative;
+
+    &__bright {
+        background: $bright_color;
+        margin-bottom: 100px;
+        @include tablet {
+            margin-bottom: 120px;
+        }
+    }
+    &__gray {
+        background: $gray_color__bg;
+        padding-top: 38px;
+        padding-bottom: 38px;
+    }
+
     &_holder {
         @include layout;
         padding: 0 $layout_indent;
 
-        &__bright {
-            background: $bright_color;
+    }
 
-        }
-        &__gray {
-            background: $gray_color__bg;
-            padding-top: 38px;
-            padding-bottom: 38px;
+    &_image {
+        display: none;
+        @include tablet {
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            margin: 0 0 -100px;
         }
     }
 }
