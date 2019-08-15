@@ -1320,14 +1320,14 @@ h2,
   bottom: -80px;
   width: 269px;
   height: 409.5px;
-  z-index: 1;
+  z-index: -1;
 }
 
 @media all and (min-width: 769px) {
   .content__dots::after {
     width: 570px;
     height: 821px;
-    bottom: -160px;
+    bottom: -260px;
   }
 }
 
