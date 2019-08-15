@@ -37,10 +37,10 @@
         }
 
         .menu-opened &:nth-child(1) {
-            align-self: flex-end;
+            transform: translateY(12px);
         }
         .menu-opened &:nth-child(3) {
-            align-self: flex-start;
+            transform: translateY(-12px);
         }
     }
 }

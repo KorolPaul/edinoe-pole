@@ -1,7 +1,7 @@
 .advantages {
     margin: 0 0 100px;
     @include tablet {
-        margin-bottom: 80px;
+        margin-bottom: 120px;
     }
 
     &_areas {
@@ -54,11 +54,11 @@
     &_list {
         line-height: 1.38;
 
-        li::marker {
-            color: #d8d6d8;
+        li::before {
+            background: #d8d6d8;
 
             .advantages_area__main & {
-                color: $yellow_color;
+                background: $yellow_color;
             }
         }
     }

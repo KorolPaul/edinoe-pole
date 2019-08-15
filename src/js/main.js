@@ -46,7 +46,7 @@ $(document).ready(function () {
         $circles.eq(index).addClass('st1');
         $circles.eq(index).removeClass('st0');
         $circles.eq(index).addClass('bubble');
-    }, 1000);
+    }, 650);
 
     /* For who animation */
     $('.target').on('click', function() {

@@ -112,6 +112,14 @@
                 top: 110px;
                 left: 20px;
                 right: 35px;
+                color: transparent;
+                transition: .2s ease-in-out color;
+            }
+            .target:hover &,
+            .target.active & {
+                @include tablet {
+                    color: $light_color;
+                }
             }
         }
     }

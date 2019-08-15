@@ -5,6 +5,9 @@
     color: $light_color;
     @include tablet {
         padding: 72px 110px;
+        max-width: 1060px;
+        box-sizing: border-box;
+        margin: auto;
     }
 
     &_row {
@@ -43,7 +46,7 @@
         margin: 0;
         @include tablet {
             font-size: 17px;
-            margin: 0 0 0 18px;
+            margin: 6px 0 0 18px;
         }
     }
     &_error {

@@ -440,13 +440,27 @@ p {
 
 ul,
 ol {
+  padding: 0;
+}
+
+ul li,
+ol li {
   padding: 0 0 0 20px;
+}
+
+@media all and (min-width: 769px) {
+  ul li,
+  ol li {
+    padding: 0 0 0 34px;
+  }
 }
 
 ul li {
   font-size: 16px;
   line-height: 1.38;
   margin: 0 0 16px;
+  list-style: none;
+  position: relative;
 }
 
 @media all and (min-width: 769px) {
@@ -456,10 +470,21 @@ ul li {
   }
 }
 
-ul li::marker {
-  color: #d4b85d;
-  font-size: 24px;
-  vertical-align: -2px;
+ul li::before {
+  content: '';
+  border-radius: 50%;
+  background: #d4b85d;
+  width: 12px;
+  height: 12px;
+  position: absolute;
+  left: 0;
+  top: 6px;
+}
+
+@media all and (min-width: 769px) {
+  ul li::before {
+    top: 7px;
+  }
 }
 
 img {
@@ -502,7 +527,7 @@ input[type="button"] {
   padding: 12px 40px 13px;
   text-align: center;
   margin: 0 auto 10px;
-  transition: .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 @media all and (min-width: 769px) {
@@ -542,7 +567,7 @@ input[type="button"]:disabled {
   padding: 12px 40px 13px;
   text-align: center;
   margin: 0 auto 10px;
-  transition: .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 @media all and (min-width: 769px) {
@@ -581,6 +606,7 @@ input[type="button"]:disabled {
 .button__bordered {
   border: 1px solid #7d5dd4;
   padding: 10px 23px;
+  font-size: 17px;
 }
 
 input[type="text"],
@@ -596,7 +622,6 @@ input[type="tel"] {
   padding: 14px 17px;
   width: 100%;
   margin: 0 0 10px;
-  opacity: 0.4;
   border-radius: 6px;
   background-color: #ffffff;
   transition: .2s ease-in opacity, .2s ease-in color;
@@ -657,6 +682,15 @@ input[type="email"], .invalid
 input[type="url"], .invalid
 input[type="tel"] {
   border-color: #d91616;
+}
+
+input[type="text"]:placeholder-shown,
+input[type="password"]:placeholder-shown,
+input[type="search"]:placeholder-shown,
+input[type="email"]:placeholder-shown,
+input[type="url"]:placeholder-shown,
+input[type="tel"]:placeholder-shown {
+  opacity: 0.4;
 }
 
 input:-webkit-autofill,
@@ -723,6 +757,9 @@ label {
 @media all and (min-width: 769px) {
   .form {
     padding: 72px 110px;
+    max-width: 1060px;
+    box-sizing: border-box;
+    margin: auto;
   }
 }
 
@@ -777,7 +814,7 @@ label {
 @media all and (min-width: 769px) {
   .form_clarification {
     font-size: 17px;
-    margin: 0 0 0 18px;
+    margin: 6px 0 0 18px;
   }
 }
 
@@ -846,7 +883,8 @@ h2,
   .subtitle {
     font-size: 25px;
     line-height: 1.2;
-    margin: 0 0 40px;
+    margin: 0 auto 40px;
+    max-width: 800px;
   }
 }
 
@@ -855,7 +893,7 @@ h2,
   padding-right: 20px;
   box-sizing: border-box;
   position: relative;
-  padding: 10px 0;
+  padding: 10px 20px;
   z-index: 2;
   margin: 0 0 53px;
 }
@@ -990,7 +1028,7 @@ h2,
 .footer {
   background: #100f10;
   color: #fff;
-  padding: 212px 20px 10px;
+  padding: 112px 20px 10px;
   font-size: 16px;
   margin: -160px 0 0;
   line-height: 1.43;
@@ -999,6 +1037,7 @@ h2,
 @media all and (min-width: 769px) {
   .footer {
     margin: -290px 0 0;
+    padding-top: 212px;
     padding-bottom: 60px;
   }
 }
@@ -1141,7 +1180,7 @@ h2,
 
 @media all and (min-width: 1025px) {
   .menu_link {
-    margin: 0 30px;
+    margin: 0 25px;
   }
 }
 
@@ -1208,11 +1247,11 @@ h2,
 }
 
 .menu-opened .menu-toggle_line:nth-child(1) {
-  align-self: flex-end;
+  transform: translateY(12px);
 }
 
 .menu-opened .menu-toggle_line:nth-child(3) {
-  align-self: flex-start;
+  transform: translateY(-12px);
 }
 
 .logo {
@@ -2868,6 +2907,15 @@ h2,
     top: 110px;
     left: 20px;
     right: 35px;
+    color: transparent;
+    transition: .2s ease-in-out color;
+  }
+}
+
+@media all and (min-width: 769px) {
+  .target:hover .target_text p,
+  .target.active .target_text p {
+    color: #fff;
   }
 }
 
@@ -2875,6 +2923,7 @@ h2,
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: center;
 }
 
 @media all and (min-width: 769px) {
@@ -2958,12 +3007,6 @@ h2,
   position: relative;
   text-align: center;
   margin: 0 0 100px;
-}
-
-@media all and (min-width: 769px) {
-  .steps {
-    margin-bottom: 220px;
-  }
 }
 
 .steps_holder {
@@ -3060,6 +3103,7 @@ h2,
 }
 
 .step_list li {
+  position: relative;
   font-size: 14px;
 }
 
@@ -3067,6 +3111,42 @@ h2,
   .step_list li {
     font-size: 17px;
   }
+}
+
+.title::before {
+  content: '';
+  border-width: 3px;
+  border-style: solid;
+  border-color: #100f10 transparent transparent transparent;
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  opacity: 0;
+  transform: translate(-50%, 0);
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
+}
+
+.title::after {
+  content: attr(data-title);
+  padding: 10px;
+  background: #100f10;
+  border-radius: 3px;
+  color: #fff;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  margin: 0 0 3px;
+  font-size: 13px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
+}
+
+.title:hover::before, .title:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
 }
 
 .demo {
@@ -3119,7 +3199,7 @@ h2,
 
 @media all and (min-width: 769px) {
   .advantages {
-    margin-bottom: 80px;
+    margin-bottom: 120px;
   }
 }
 
@@ -3192,12 +3272,12 @@ h2,
   line-height: 1.38;
 }
 
-.advantages_list li::marker {
-  color: #d8d6d8;
+.advantages_list li::before {
+  background: #d8d6d8;
 }
 
-.advantages_area__main .advantages_list li::marker {
-  color: #d4b85d;
+.advantages_area__main .advantages_list li::before {
+  background: #d4b85d;
 }
 
 @media all and (min-width: 769px) {
@@ -3293,6 +3373,7 @@ h2,
   padding: 0 32px 0 0;
   background: url(src/img/arrow.svg) no-repeat right center;
   transition: .2s ease-in-out filter;
+  font-weight: bold;
 }
 
 @media all and (min-width: 769px) {
@@ -3408,12 +3489,17 @@ h2,
   display: flex;
   align-items: flex-start;
   justify-content: stretch;
+  padding: 0;
 }
 
 @media all and (min-width: 769px) {
   .increase-list li {
     margin-bottom: 20px;
   }
+}
+
+.increase-list li::before {
+  content: none;
 }
 
 .increase-list_count {
@@ -3486,13 +3572,19 @@ h2,
 }
 
 .cost_list li {
-  margin: 0;
+  margin: 0 0 6px;
+}
+
+@media all and (min-width: 769px) {
+  .cost_list li {
+    font-size: 17px;
+  }
 }
 
 .cost_list li:first-child {
   color: #7d5dd4;
 }
 
-.cost_list li:first-child::marker {
-  color: #7d5dd4;
+.cost_list li:first-child::before {
+  background: #7d5dd4;
 }

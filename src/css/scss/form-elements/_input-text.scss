@@ -12,7 +12,7 @@ input[type="tel"] {
     padding: 14px 17px;
     width: 100%;
     margin: 0 0 10px;
-    opacity: 0.4;
+    
     border-radius: 6px;
     background-color: #ffffff;
     transition: .2s ease-in opacity, .2s ease-in color;
@@ -27,6 +27,9 @@ input[type="tel"] {
 
     .invalid & {
         border-color: #d91616;
+    }
+    &:placeholder-shown {
+        opacity: 0.4;
     }
 }
 

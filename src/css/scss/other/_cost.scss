@@ -28,13 +28,16 @@
     }
     &_list {
         li {
-            margin: 0;
+            margin: 0 0 6px;
+            @include tablet {
+                font-size: 17px;
+            }
 
             &:first-child {
                 color: $bright_color;
                 
-                &::marker {
-                    color: $bright_color;
+                &::before {
+                    background: $bright_color;
                 }
             }
         }

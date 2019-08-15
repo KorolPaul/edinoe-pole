@@ -33,22 +33,39 @@ p {
 
 ul,
 ol {
-    padding: 0 0 0 20px;
+    padding: 0;
+
+    li {
+        padding: 0 0 0 20px;
+        @include tablet {
+            padding: 0 0 0 34px;
+        }
+    }
 }
 
 ul li {
     font-size: 16px;
     line-height: 1.38;
     margin: 0 0 16px;
+    list-style: none;
+    position: relative;
     @include tablet {
         font-size: 21px;
         line-height: 1.19;
     }
 
-    &::marker {
-        color: $yellow_color;
-        font-size: 24px;
-        vertical-align: -2px;
+    &::before {
+        content: '';
+        border-radius: 50%;
+        background: $yellow_color;
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        left: 0;
+        top: 6px;
+        @include tablet {
+            top: 7px;
+        }
     }
 }
 

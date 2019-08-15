@@ -2,9 +2,6 @@
     position: relative;
     text-align: center;
     margin: 0 0 100px;
-    @include tablet {
-        margin-bottom: 220px;
-    }
 
     &_holder {
         text-align: left;
@@ -83,10 +80,54 @@
     }
     &_list {
         li {
+            position: relative;
             font-size: 14px;
             @include tablet {
                 font-size: 17px;
             }
+        }
+    }
+}
+
+.title {
+    &::before {
+        content: '';
+        border-width: 3px;
+        border-style: solid;
+        border-color: $color transparent transparent transparent;
+        position: absolute;
+        left: 50%;
+        top: -3px;
+        opacity: 0;
+        transform: translate(-50%, 0);
+        transition: .2s ease-in-out opacity,
+                    .2s ease-in-out visibility;
+    }
+    &::after {
+        content: attr(data-title);
+        padding: 10px;
+        background: $color;
+        border-radius: 3px;
+        color: $light_color;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        margin: 0 0 3px;
+        font-size: 13px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s ease-in-out opacity,
+                    .2s ease-in-out visibility;
+    }
+
+    &:hover {
+        &::before,
+        &::after {
+            opacity: 1;
+            visibility: visible;
+            transition: .2s ease-in-out opacity,
+                        .2s ease-in-out visibility;
         }
     }
 }
