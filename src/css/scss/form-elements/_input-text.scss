@@ -6,7 +6,7 @@ input[type="url"],
 input[type="tel"] {
     @include placeholder-color(#100f10);
     color: $color;
-    border: none;
+    border: 2px solid transparent;
     box-sizing: border-box;
     font: 500 16px $font-family;
     padding: 14px 17px;
@@ -24,6 +24,10 @@ input[type="tel"] {
     &:focus {
         opacity: 1;
     }
+
+    .invalid & {
+        border-color: #d91616;
+    }
 }
 
 input:-webkit-autofill,
@@ -36,4 +40,10 @@ textarea:-webkit-autofill:focus {
     border-bottom: 1px solid rgba($color, .12);
     -webkit-text-fill-color:  #4e565c;
     transition: background-color 5000s ease-in-out 0s;
+}
+
+.datapicker {
+    background-image: url(#{$img}/calendar.svg);
+    background-repeat: no-repeat;
+    background-position: 97% center;
 }

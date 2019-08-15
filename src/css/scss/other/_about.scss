@@ -1,6 +1,9 @@
 .about {
     text-align: center;
     position: relative;
+    @include tablet {
+        margin: 0 0 230px;
+    }
 
     &_button-title {
         display: block;
@@ -14,16 +17,47 @@
     &_list {
         text-align: left;
         position: relative;
+        margin: 50px 0 0;
         z-index: 1;
     }
     &_dots {
         width: 100%;
         @include tablet {
             position: absolute;
-            top: 180px;
+            top: 200px;
             left: 100%;
             transform: translate(-50%, 0);
-            width: 800px;
+            width: 1000px;
         }
+
+        path {
+            transition: .2s ease-in-out all;
+            transform-origin: center center;
+            stroke-width: 0;
+        }
+        .bubble {
+            animation: .5s ease-in-out bubble;
+        }
+    }
+
+    h1 {
+        @include tablet {
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+
+@keyframes bubble {
+    0% {
+        stroke-width: 0px;
+    }
+    50% {
+        stroke-width: 4px;
+    }
+    100% {
+        stroke-width: 0px;
     }
 }

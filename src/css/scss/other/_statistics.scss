@@ -8,7 +8,7 @@
         padding: 57px 60px;
         display: flex;
         justify-content: space-between;
-        margin: -130px 0 130px;
+        margin: -230px 0 130px;
     }
 
     &_column {
@@ -23,6 +23,7 @@
         font-weight: 200;
         margin: 0 0 5px;
         @include tablet {
+            white-space: nowrap;
             font-size: 64px;
         }
     }

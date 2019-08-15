@@ -22,6 +22,12 @@
         min-height: 264px;
     }
 
+    &:nth-child(4n) {
+        @include tablet {
+            margin-right: 0;
+        }
+    }
+
     &:hover,
     &.active {
         background: $bright_color;

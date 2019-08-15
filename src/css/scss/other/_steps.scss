@@ -81,4 +81,12 @@
         font-weight: 600;
         line-height: 1.39;
     }
+    &_list {
+        li {
+            font-size: 14px;
+            @include tablet {
+                font-size: 17px;
+            }
+        }
+    }
 }
