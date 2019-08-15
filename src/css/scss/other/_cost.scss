@@ -3,7 +3,9 @@
         display: flex;
         align-items: flex-start;
         justify-content: space-between;
+        max-width: 1040px;
     }
+
     &_title {
         font-size: 30px;
         font-weight: 600;
@@ -31,6 +33,7 @@
             margin: 0 0 6px;
             @include tablet {
                 font-size: 17px;
+                margin-left: 70px;
             }
 
             &:first-child {
@@ -40,6 +43,14 @@
                     background: $bright_color;
                 }
             }
+        }
+    }
+    &_column {
+        @include tablet {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            margin: 0 0 0 40px;
         }
     }
 }

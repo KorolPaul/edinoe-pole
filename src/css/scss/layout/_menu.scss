@@ -25,19 +25,14 @@
     }
 
     &_link {
-        font-size: 30px;
-        font-weight: 500;
         line-height: 1.07;
         display: block;
-        font: 300 19px $font-family;
+        font: 500 30px $font-family;
         margin: 0 0 30px;
         @include tablet {
             font-size: 17px;
             font-weight: bold;
-            margin: 0 15px;
-        }
-        @include desktop {
-            margin: 0 25px;
+            margin: 0 13px;
         }
 
         &:hover {

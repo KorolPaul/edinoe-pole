@@ -13,10 +13,13 @@
 
     &_container {
         @include tablet {
-            @include layout;
+            margin-left: auto;
+            margin-right: auto;
             display: flex;
             align-items: flex-start;
             justify-content: space-between;
+            max-width: 1060px;
+            box-sizing: border-box;
         }
     }
     &_description {

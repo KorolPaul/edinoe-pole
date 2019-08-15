@@ -135,7 +135,6 @@
     font: 500 16px $font-family;
     padding: 14px 17px;
     width: 100%;
-    opacity: 0.4;
     border-radius: 6px;
     background-color: #ffffff;
     background-image: url(#{$img}/clock.svg);
@@ -144,6 +143,10 @@
     @include tablet {
         font-size: 17px;
         padding: 17px 20px;
+    }
+
+    &.not-full {
+        opacity: 0.4;
     }
 }
 .selectize-control.multi .selectize-input.has-items {

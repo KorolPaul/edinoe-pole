@@ -1044,20 +1044,13 @@ h2,
 
 @media all and (min-width: 769px) {
   .footer_container {
-    padding-left: 20px;
-    padding-right: 20px;
-    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-  }
-}
-
-@media all and (min-width: 769px) and (min-width: 769px) {
-  .footer_container {
-    max-width: 1280px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 1060px;
+    box-sizing: border-box;
   }
 }
 
@@ -1162,11 +1155,9 @@ h2,
 }
 
 .menu_link {
-  font-size: 30px;
-  font-weight: 500;
   line-height: 1.07;
   display: block;
-  font: 300 19px "Raleway", sans-serif;
+  font: 500 30px "Raleway", sans-serif;
   margin: 0 0 30px;
 }
 
@@ -1174,13 +1165,7 @@ h2,
   .menu_link {
     font-size: 17px;
     font-weight: bold;
-    margin: 0 15px;
-  }
-}
-
-@media all and (min-width: 1025px) {
-  .menu_link {
-    margin: 0 25px;
+    margin: 0 13px;
   }
 }
 
@@ -2476,7 +2461,6 @@ h2,
   font: 500 16px "Raleway", sans-serif;
   padding: 14px 17px;
   width: 100%;
-  opacity: 0.4;
   border-radius: 6px;
   background-color: #ffffff;
   background-image: url(src/img/clock.svg);
@@ -2489,6 +2473,10 @@ h2,
     font-size: 17px;
     padding: 17px 20px;
   }
+}
+
+.selectize-input.not-full {
+  opacity: 0.4;
 }
 
 .selectize-control.multi .selectize-input.has-items {
@@ -2703,6 +2691,7 @@ h2,
   font-size: 13px;
   font-weight: 500;
   text-align: center;
+  opacity: 0.7;
 }
 
 @media all and (min-width: 769px) {
@@ -3272,6 +3261,12 @@ h2,
   line-height: 1.38;
 }
 
+@media all and (min-width: 769px) {
+  .advantages_list li {
+    margin-bottom: 20px;
+  }
+}
+
 .advantages_list li::before {
   background: #d8d6d8;
 }
@@ -3538,6 +3533,7 @@ h2,
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    max-width: 1040px;
   }
 }
 
@@ -3578,6 +3574,7 @@ h2,
 @media all and (min-width: 769px) {
   .cost_list li {
     font-size: 17px;
+    margin-left: 70px;
   }
 }
 
@@ -3587,4 +3584,13 @@ h2,
 
 .cost_list li:first-child::before {
   background: #7d5dd4;
+}
+
+@media all and (min-width: 769px) {
+  .cost_column {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 0 0 0 40px;
+  }
 }
