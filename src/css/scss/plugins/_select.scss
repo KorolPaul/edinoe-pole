@@ -143,6 +143,7 @@
     @include tablet {
         font-size: 17px;
         padding: 17px 20px;
+        min-height: 58px;
     }
 
     &.not-full {
@@ -202,6 +203,7 @@
     background: none !important;
     line-height: inherit !important;
     box-shadow: none !important;
+    font-size: 16px;
 }
 .selectize-input > input::-ms-clear {
     display: none;
