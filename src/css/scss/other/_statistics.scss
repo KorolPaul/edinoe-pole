@@ -15,15 +15,16 @@
         margin: 0 0 30px;
         @include tablet {
             margin: 0;
-            width: 28%;
+            width: 30%;
+        }
+        @include desktop {
         }
     }
     &_title {
         font-size: 40px;
         font-weight: 200;
         margin: 0 0 5px;
-        @include tablet {
-            white-space: nowrap;
+        @include desktop {
             font-size: 64px;
         }
     }

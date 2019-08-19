@@ -47,7 +47,7 @@
 
     &_image {
         display: none;
-        @include tablet {
+        @include desktop {
             display: block;
             position: absolute;
             right: 0;

@@ -11,6 +11,7 @@
     padding: 12px 40px 13px;
     text-align: center;
     margin: 0 auto 10px;
+    white-space: nowrap;
     transition: .2s ease-in-out background-color,
                 .2s ease-in-out color;
     @include tablet {

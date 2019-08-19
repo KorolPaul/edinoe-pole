@@ -23,12 +23,13 @@
     }
     &_dots {
         width: 100%;
-        @include tablet {
+        @include desktop {
             position: absolute;
             top: 200px;
             left: 100%;
             transform: translate(-50%, 0);
             width: 1000px;
+            z-index: -1;
         }
 
         path {

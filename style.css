@@ -527,6 +527,7 @@ input[type="button"] {
   padding: 12px 40px 13px;
   text-align: center;
   margin: 0 auto 10px;
+  white-space: nowrap;
   transition: .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
@@ -567,6 +568,7 @@ input[type="button"]:disabled {
   padding: 12px 40px 13px;
   text-align: center;
   margin: 0 auto 10px;
+  white-space: nowrap;
   transition: .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
@@ -1335,7 +1337,7 @@ h2,
   display: none;
 }
 
-@media all and (min-width: 769px) {
+@media all and (min-width: 1025px) {
   .content_image {
     display: block;
     position: absolute;
@@ -1406,6 +1408,7 @@ h2,
 @media all and (min-width: 769px) {
   .tabs {
     margin-bottom: 134px;
+    min-height: 650px;
   }
 }
 
@@ -2713,13 +2716,14 @@ h2,
   width: 100%;
 }
 
-@media all and (min-width: 769px) {
+@media all and (min-width: 1025px) {
   .about_dots {
     position: absolute;
     top: 200px;
     left: 100%;
     transform: translate(-50%, 0);
     width: 1000px;
+    z-index: -1;
   }
 }
 
@@ -2965,7 +2969,7 @@ h2,
 @media all and (min-width: 769px) {
   .statistics_column {
     margin: 0;
-    width: 28%;
+    width: 30%;
   }
 }
 
@@ -2975,9 +2979,8 @@ h2,
   margin: 0 0 5px;
 }
 
-@media all and (min-width: 769px) {
+@media all and (min-width: 1025px) {
   .statistics_title {
-    white-space: nowrap;
     font-size: 64px;
   }
 }
@@ -3114,7 +3117,7 @@ h2,
   top: -3px;
   opacity: 0;
   transform: translate(-50%, 0);
-  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
 }
 
 .title::after {
@@ -3131,13 +3134,13 @@ h2,
   font-size: 13px;
   opacity: 0;
   visibility: hidden;
-  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
 }
 
 .title:hover::before, .title:hover::after {
   opacity: 1;
   visibility: visible;
-  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
+  transition: .2s ease-in-out opacity, .2s ease-in-out visibility;
 }
 
 .demo {

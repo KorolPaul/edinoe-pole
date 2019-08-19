@@ -2,6 +2,7 @@
     margin: 0 0 200px;
     @include tablet {
         margin-bottom: 134px;
+        min-height: 650px;
     }
 
     &_links {
