@@ -11,7 +11,7 @@
 .target {
     position: relative;
     box-sizing: border-box;
-    padding: 17px 15px 17px 83px;
+    padding: 17px 15px 0 83px;
     min-height: 50px;
     margin: 30px 0;
     border-radius: 6px;
@@ -30,11 +30,13 @@
 
     &:hover,
     &.active {
-        background: $bright_color;
-        color: $light_color;
         @include tablet {
-            background: transparent;
-            color: $color;
+            background: $bright_color;
+            color: $light_color;
+            @include tablet {
+                background: transparent;
+                color: $color;
+            }
         }
     }
 
@@ -59,7 +61,9 @@
 
         .target:hover &,
         .target.active & {
-            background: transparent;
+            @include tablet {
+                background: transparent;
+            }
         }
     }
     &_icon-image {
@@ -75,10 +79,9 @@
     &_text {
         font-size: 17px;
         line-height: 1.47;
-        color: $light_color;
         margin: 10px 0 0;
-        display: none;
         @include tablet {
+            color: $light_color;
             display: block;
             border-radius: 100px;
             box-sizing: border-box;
@@ -96,10 +99,10 @@
         
         .target:hover &,
         .target.active & {
-            border-radius: 6px;
-            display: block;
-            opacity: 1;
             @include tablet {
+                border-radius: 6px;
+                display: block;
+                opacity: 1;
                 height: 100%;
                 width: 100%;
                 background: $bright_color;

@@ -2781,7 +2781,7 @@ h2,
 .target {
   position: relative;
   box-sizing: border-box;
-  padding: 17px 15px 17px 83px;
+  padding: 17px 15px 0 83px;
   min-height: 50px;
   margin: 30px 0;
   border-radius: 6px;
@@ -2802,12 +2802,14 @@ h2,
   }
 }
 
-.target:hover, .target.active {
-  background: #7d5dd4;
-  color: #fff;
+@media all and (min-width: 769px) {
+  .target:hover, .target.active {
+    background: #7d5dd4;
+    color: #fff;
+  }
 }
 
-@media all and (min-width: 769px) {
+@media all and (min-width: 769px) and (min-width: 769px) {
   .target:hover, .target.active {
     background: transparent;
     color: #100f10;
@@ -2837,9 +2839,11 @@ h2,
   }
 }
 
-.target:hover .target_icon,
-.target.active .target_icon {
-  background: transparent;
+@media all and (min-width: 769px) {
+  .target:hover .target_icon,
+  .target.active .target_icon {
+    background: transparent;
+  }
 }
 
 .target_icon-image {
@@ -2857,13 +2861,12 @@ h2,
 .target_text {
   font-size: 17px;
   line-height: 1.47;
-  color: #fff;
   margin: 10px 0 0;
-  display: none;
 }
 
 @media all and (min-width: 769px) {
   .target_text {
+    color: #fff;
     display: block;
     border-radius: 100px;
     box-sizing: border-box;
@@ -2880,16 +2883,12 @@ h2,
   }
 }
 
-.target:hover .target_text,
-.target.active .target_text {
-  border-radius: 6px;
-  display: block;
-  opacity: 1;
-}
-
 @media all and (min-width: 769px) {
   .target:hover .target_text,
   .target.active .target_text {
+    border-radius: 6px;
+    display: block;
+    opacity: 1;
     height: 100%;
     width: 100%;
     background: #7d5dd4;

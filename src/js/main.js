@@ -12,15 +12,10 @@ $(document).ready(function () {
     }
     $menuToggle.on('click', toggleMenu);
 
-
-    /* Popup */
-    var $popup = $('.popup');
-
-    function togglePopup() {
-        $popup.toggleClass('opened');
-    }
-
-    $('.fade').on('click', togglePopup);
+    $('.menu_link').on('click', function() {
+        $menu.removeClass('opened');
+        $('html').removeClass('menu-opened');
+    });
 
 
     /* Datapicker */
